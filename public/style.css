@@ -72,17 +72,19 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
 }
 
 .sdg section {
-    padding: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
     width: 80%;
     align-items: center;
     background: var(--cardColor);
     box-shadow: var(--shadow);
     border-radius: var(--borderRadius);
     width: 80%;
+    gap: 2rem;
 }
 
 .sdg section ul {
@@ -90,10 +92,11 @@ nav ul li a {
     justify-content: center;
     gap: 0.3rem;
     flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
 }
 
 .sdg section ul li {
-    width: 10rem;
     list-style: none;
     width: 6rem;
     transition: all 0.3s;
@@ -236,3 +239,69 @@ path.two {
     }
   }
 
+
+
+  /* //////////INFO PAGINA/////////// */
+
+  .info {
+    background: var(--backgroundColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .info section {
+    display: flex;
+    padding: 2rem 5rem;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    background: var(--cardColor);
+    box-shadow: var(--shadow);
+    border-radius: var(--borderRadius);
+  }
+
+  .info section div h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .info section ul {
+    display: flex;
+    width: 100%;
+    gap: 5rem;
+    
+  }
+  .info section ul li {
+    display: flex;
+    width: 100%;
+  }
+
+
+  .info section ul li:nth-child(2) {
+    text-align: right;
+    width: 40%;
+  }
+
+  .info section ul li p {
+    font-size: 1.2rem;
+  }
+
+  .info section ul li img {
+    width: 20rem;
+    border-radius: var(--borderRadius);
+  }
+
+  .info section .sdgSub p {
+    font: 1.6rem;
+  }
+
+  .button {
+    align-items: center;
+  }
+
+  .button a {
+    width: 35rem;
+  }

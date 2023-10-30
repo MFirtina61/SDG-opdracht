@@ -33,29 +33,29 @@
             <ul class="sdg-list">
                 <?php
                 include '../source/database.php';
-                $sql = 'SELECT * FROM Sdg_items ORDER BY title';
+
+                $sql = 'SELECT * FROM Sdg_items WHERE id >= 1 AND id <= 9 ORDER BY id ASC';
                 $result = $conn->query($sql);
+                
                 while ($sdgItem = $result->fetch_assoc()) {
                     include "../source/views/sdg1.php";
-
-                }
-
+                }                
                 ?>
-
-
-
+                
             </ul>
             <ul>
-                <?php
-                // include '../source/sdg.php';
+            <?php
+                include '../source/database.php';
 
-                // // Vervolgens SDG's 10 tot 17 weergeven
-                // for ($i = 9; $i < 17; $i++) {
-                //     $sdgItem = $sdgData[$i];
+                $sql = 'SELECT * FROM Sdg_items WHERE id >= 10 AND id <= 17 ORDER BY id ASC';
+                $result = $conn->query($sql);
+                
+                while ($sdgItem = $result->fetch_assoc()) {
                     include "../source/views/sdg1.php";
-                // }
+                }                
                 ?>
             </ul>
+            
         </section>
     </article>
 
@@ -85,7 +85,17 @@
             </div>
         </section>
     </article>
+    
+    <?php
+                include '../source/database.php';
 
+                $sql = 'SELECT * FROM Sdg_items WHERE id >= 10 AND id <= 10 ORDER BY id ASC';
+                $result = $conn->query($sql);
+                
+                while ($sdgInfo = $result->fetch_assoc()) {
+                    include "../source/views/infoSdg.php";
+                }                
+                ?>
 
 
 
