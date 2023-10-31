@@ -1,0 +1,1 @@
+SELECT * FROM Sdg_items;Sdg_items

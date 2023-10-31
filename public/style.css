@@ -363,6 +363,11 @@ path.two {
       .mainInfo section ul li img {
         width: 200%;
       }
+
+      .info section ul li img {
+        width: 2rem;
+      }
+
     }
 
 

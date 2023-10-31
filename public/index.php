@@ -91,7 +91,7 @@
             <?php
             include '../source/database.php';
 
-            $sql = 'SELECT * FROM Sdg_items WHERE id >= 10 AND id <= 10 ORDER BY id ASC';
+            $sql = 'SELECT * FROM Sdg_items WHERE id = 10';
             $result = $conn->query($sql);
 
             while ($sdgInfo = $result->fetch_assoc()) {
