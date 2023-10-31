@@ -1,12 +1,15 @@
 <?php
 $menuData = [
     [
-        "title" => "lala1"
+        "title" => "Sdg's",
+        "link" => "#sdgs"
     ],
     [
-        "title" => "lala2"
+        "title" => "Game",
+        "link" => "#game"
     ],
     [
-        "title" => "lala3"
+        "title" => "Info",
+        "link" => "#mainInfo"
     ]
 ];

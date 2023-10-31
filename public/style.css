@@ -20,6 +20,7 @@ html {
 
 body {
     background: var(--backgroundColor);
+    scroll-behavior: smooth;
 }
 
 nav {
@@ -38,6 +39,7 @@ nav section {
     padding: 0.5rem 2rem;
     align-items: center;
     border-radius: var(--borderRadius);
+    flex-wrap: wrap;
 }
 
 nav section img {
@@ -120,20 +122,86 @@ nav ul li a {
 
 
 
+
+
+
+
+.mainInfo {
+  background: var(--backgroundColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.mainInfo section {
+  display: flex;
+  padding: 2rem 5rem;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  background: var(--cardColor);
+  box-shadow: var(--shadow);
+  border-radius: var(--borderRadius);
+  margin-bottom: 3rem;
+}
+
+.mainInfo section div h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.mainInfo section ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5rem;
+  
+}
+.mainInfo section ul li {
+  display: flex;
+  width: 100%;
+}
+
+
+.mainInfo section ul li:nth-child(2) {
+  text-align: right;
+  width: 40%;
+}
+
+.mainInfo section ul li p {
+  font-size: 1.2rem;
+}
+
+.mainInfo section ul li img {
+  width: 20rem;
+  border-radius: var(--borderRadius);
+}
+
+
+
+/* ///////////GAME BUTTON/////////// */
+
+
 .game {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80%;
+    height: 30vh;
+    width: 80%;
+    margin-bottom: 3rem;
+    margin: auto;
 }
 
 .game section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5rem;
     align-items: center;
     background: var(--cardColor);
     box-shadow: var(--shadow);
@@ -233,11 +301,69 @@ path.two {
 
   }
 
-  @media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
     .sdg {
-      margin-top: 20px; /* Voeg wat bovenmarge toe om overlapping te voorkomen */
+      margin-top: 0.5rem;
+      padding: 0.3rem;
+      margin-bottom: 3rem; /* Voeg wat bovenmarge toe om overlapping te voorkomen */
+    }
+
+    .sdg section {
+      padding: 2rem 1rem; /* Voeg wat bovenmarge toe om overlapping te voorkomen */
     }
   }
+
+  @media only screen and (max-width: 460px) {
+  
+      .sdg {
+        margin-top: 0.5rem;
+        padding: 3rem 0rem;
+      }
+  
+      .sdg section {
+        padding: 2rem 0.3rem; /* Voeg wat bovenmarge toe om overlapping te voorkomen */
+      }
+
+      .sdg section ul {
+        width: 100%;
+      }
+
+      nav section {
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+
+      .game section h2 {
+        font-size: 1.5rem;
+      }
+
+      .cta {
+        width: 100%;
+      }
+
+      
+
+      .mainInfo section {
+        padding: 1rem;
+      }
+
+      .mainInfo section ul {
+        justify-content: flex-start;
+      }
+
+      .mainInfo section div h2 {
+        font-size: 2rem;
+      }
+
+      .mainInfo section ul li img {
+        width: 200%;
+      }
+    }
 
 
 
@@ -248,7 +374,7 @@ path.two {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+
   }
   
   .info section {
@@ -272,6 +398,7 @@ path.two {
     display: flex;
     width: 100%;
     gap: 5rem;
+    flex-wrap: wrap;
     
   }
   .info section ul li {
@@ -296,6 +423,7 @@ path.two {
 
   .info section .sdgSub p {
     font: 1.6rem;
+    margin-top: 1rem;
   }
 
   .button {
@@ -304,4 +432,12 @@ path.two {
 
   .button a {
     width: 35rem;
+  }
+
+  .button {
+    margin-top: 2rem;
+  }
+  
+  .button section .cta {
+    width: 100%;
   }

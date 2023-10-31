@@ -14,7 +14,7 @@
 <body>
     <nav>
         <section>
-            <img src="img/logo.png" alt="">
+            <a href="/index.php"><img src="img/logo.png" alt=""></a>
 
             <ul>
                 <?php
@@ -28,7 +28,7 @@
         </section>
     </nav>
 
-    <article class="sdg">
+    <article class="sdg" id="sdgs">
         <section>
             <ul class="sdg-list">
                 <?php
@@ -36,30 +36,30 @@
 
                 $sql = 'SELECT * FROM Sdg_items WHERE id >= 1 AND id <= 9 ORDER BY id ASC';
                 $result = $conn->query($sql);
-                
+
                 while ($sdgItem = $result->fetch_assoc()) {
                     include "../source/views/sdg1.php";
-                }                
+                }
                 ?>
-                
+
             </ul>
             <ul>
-            <?php
+                <?php
                 include '../source/database.php';
 
                 $sql = 'SELECT * FROM Sdg_items WHERE id >= 10 AND id <= 17 ORDER BY id ASC';
                 $result = $conn->query($sql);
-                
+
                 while ($sdgItem = $result->fetch_assoc()) {
                     include "../source/views/sdg1.php";
-                }                
+                }
                 ?>
             </ul>
-            
+
         </section>
     </article>
 
-    <article class="game">
+    <article class="game" id="game">
         <section>
             <h2>Speel ook onze game!</h2>
             <div class="wrapper">
@@ -85,18 +85,21 @@
             </div>
         </section>
     </article>
-    
-    <?php
-                include '../source/database.php';
 
-                $sql = 'SELECT * FROM Sdg_items WHERE id >= 10 AND id <= 10 ORDER BY id ASC';
-                $result = $conn->query($sql);
-                
-                while ($sdgInfo = $result->fetch_assoc()) {
-                    include "../source/views/infoSdg.php";
-                }                
-                ?>
+    <article class="mainInfo" id="mainInfo">
+        <section>
+            <?php
+            include '../source/database.php';
 
+            $sql = 'SELECT * FROM Sdg_items WHERE id >= 10 AND id <= 10 ORDER BY id ASC';
+            $result = $conn->query($sql);
+
+            while ($sdgInfo = $result->fetch_assoc()) {
+                include "../source/views/infoSdg.php";
+            }
+            ?>
+        </section>
+    </article>
 
 
 

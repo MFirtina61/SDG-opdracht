@@ -1,3 +1,3 @@
 <li> 
-    <a href="#"><?= $menuItem["title"] ?></a>
+    <a href="<?=$menuItem["link"]?>"><?= $menuItem["title"] ?></a>
 </li>
