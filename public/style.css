@@ -364,8 +364,10 @@ path.two {
         width: 200%;
       }
 
-      .info section ul li img {
-        width: 2rem;
+
+      
+      .info section {
+        background: red;
       }
 
     }

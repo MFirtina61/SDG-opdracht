@@ -34,7 +34,7 @@
 
 
 
-    <article class="info">
+    <article class="mainInfo">
         <section>
             <?php
             include '../source/database.php';
@@ -58,7 +58,7 @@
         </section>
     </article>
 
-    <article class="game button">
+    <article class="game">
         <section>
             <h2>Speel ook onze game!</h2>
             <div class="wrapper">
