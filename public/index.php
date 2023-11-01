@@ -29,7 +29,9 @@
     </nav>
 
     <article class="sdg" id="sdgs">
+
         <section>
+        <h2>SDG's</h2>
             <ul class="sdg-list">
                 <?php
                 include '../source/database.php';
